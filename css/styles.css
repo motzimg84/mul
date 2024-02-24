@@ -1,0 +1,28 @@
+@import "navbar.css";
+@import "logo.css";
+@import "gridMul.css";
+@import "arrow.css";
+@import "footer.css";
+@import "example.css";
+@import "color.css";
+@import "popupsimul.css";
+@import "dinamicTex.css";
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.board {
+        width: 100%;
+        max-width: 2500px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+

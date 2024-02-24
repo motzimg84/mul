@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUL - Units Converter</title>
+    <link rel="icon" type="image/png" href="img/MUL_Logo_min.png"/>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        background-image: url('img/fondoWebMUL.png');
+        background-size: cover; /* Para cubrir todo el fondo */
+        background-repeat: no-repeat; /* Para evitar que se repita la imagen */
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-items">
+                <div class="conteinterImag" id="conteinterImag">
+                    <img src="img/MUL_Logo_bar.png" class="navbar-img" />
+                </div>
+                <button class="navbar-item" onclick="scrollToSection('mostrar_tabla')">Simulador</button>
+                <button class="navbar-item" onclick="scrollToSection('descrip')">Descripción</button>
+                <button class="navbar-item" onclick="scrollToSection('example')">Ejemplos</button>
+                <button class="navbar-item" >Historia</button>
+            </div>
+        </div>
+    </div>
+    <button class="navbar-button" id="navbarButton">&#9776;</button>
+    
+    <div class="contMenu" id="contMenu">
+    </div>
+
+    <div class="contLogo">
+        <img src="img/Logo_MUL.png" class="imgLog"/>
+    </div>
+
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                        Simulation Bock                                                                                
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<div class="containerMUL" id="mostrar_tabla">
+        <div style="margin-top: 10px;"></div>
+        <div style="text-align: center;">
+            <h1>Simulador de MUL?</h1>
+            <button class="help-btn" id="help-btn">?</button>
+        </div>
+        <div>
+            <img src="img/MUL_V3.png" class="imgMUL" />
+            <div class="containerGrid">
+                <div class="left-column">
+                    <!-- Contenido de la columna izquierda -->
+                </div>
+                <div class="center-column" id="center-column">
+                    <!-- Contenido de la columna central -->
+                    <div class= "tdCell_L" id="V1"></div>
+                    <div class= "tdCell_S" id="C1"></div>
+                    <div class= "tdCell_L" id="V2"></div>
+                    <div class= "tdCell_S" id="C2"></div>
+                    <div class= "tdCell_L" id="V3"></div>
+                    <div class= "tdCell_S" id="C3"></div>
+                    <div class= "tdCell_L" id="V4"></div>
+                    <div class= "tdCell_S" id="C4"></div>
+                    <div class= "tdCell_L" id="V5"></div>
+                    <div class= "tdCell_S" id="C5"></div>
+                    <div class= "tdCell_L" id="V6"></div>
+                    <div class= "tdCell_S" id="C6"></div>
+                    <div class= "tdCell_L" id="V7"></div>
+                    <div class= "tdCell_S" id="C7"></div>
+                    <div class= "tdCell_L" id="V8"></div>
+                    <div class= "tdCell_S" id="C8"></div>
+                    <div class= "tdCell_L" id="V9"></div>
+                    <div class= "tdCell_S" id="C9"></div>
+                    <div class= "tdCell_L" id="V10"></div>
+                    <div class= "tdCell_S" id="C10"></div>
+                    <div class= "tdCell_L" id="V11"></div>
+                    <div class= "tdCell_S" id="C11"></div>
+                    <div class= "tdCell_L" id="V12"></div>
+                    <div class= "tdCell_S" id="C12"></div>
+                    <div class= "tdCell_L" id="V13"></div>
+                    <div class= "tdCell_S" id="C13"></div>
+                    <div class= "tdCell_L" id="V14"></div>
+                    <div class= "tdCell_S" id="C14"></div>
+                    <div class= "tdCell_L" id="V15"></div>
+                    <div class= "tdCell_S" id="C15"></div>
+                    <div class= "tdCell_L" id="V16"></div>
+                    <div class= "tdCell_S" id="C16"></div>
+                    <div class= "tdCell_L" id="V17"></div>
+                    <div class= "tdCell_S" id="C17"></div>
+                    <div class= "tdCell_L" id="V18"></div>
+                    <div class= "tdCell_S" id="C18"></div>
+                    <div class= "tdCell_L" id="V19"></div>
+                    <div class= "tdCell_S" id="C19"></div>
+                    <div class= "tdCell_L" id="V20"></div>
+                    <div class= "tdCell_S" id="C20"></div>
+                    <div class= "tdCell_L" id="V21"></div>
+                    <div class= "tdCell_S" id="C21"></div>
+                    <div class= "tdCell_L" id="V22"></div>
+                    <div class= "tdCell_S" id="C22"></div>
+                    <div class= "tdCell_L" id="V23"></div>
+                    <div class= "tdCell_S" id="C23"></div>
+                    <div class= "tdCell_L" id="V24"></div>
+                    <div class= "tdCell_S" id="C24"></div>
+                    <div class= "tdCell_L" id="V25"></div>
+                    <div class= "tdCell_S" id="C25"></div>
+                    <div class= "tdCell_L" id="V26"></div>
+                    <div class= "tdCell_S" id="C26"></div>                       
+                </div>
+                <div class="right-column">
+                    <!-- Contenido de la columna derecha -->
+                </div>
+            </div>
+        </div>
+        <!-- Codigo para genera la felcha -->
+        <div class="flechaLine">
+            <div class="colaFL" id="colaFL"></div>
+        </div>
+        <div class="flechaUp" id="flechaUp"></div>
+        <div class="flechaStyle">
+            <div class="colaF" id="colaF"></div>
+            
+        </div>
+        <div class="row">
+            <div class="solNotice">
+                <h1 class="textNotice" id= "textoRes1"></h1>
+            </div>
+            <div class="solNotice">
+                <h1 class="textNotice" id= "textoRes2"></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <Form style="width: 100%;">
+                <div style="height: 0px; " class="row">
+                    <div  id="popupWrapper1" class="popupWrapper">
+                        <div style= "top: -25px; left: 12%; float: left; " id="popup" class="popup">
+                            <div class="popup-arrow"></div>
+                            <span class="close-btn" onclick="closePopup()">X</span>
+                            <p>1. Ingresa el aqui el numero.</p> 
+                        </div>
+                    </div>
+                    <div id="popupWrapper2" class="popupWrapper">
+                        <div style= "top: -25px; left: 22%; float: left; " id="popup" class="popup">
+                            <div class="popup-arrow"></div>
+                            <span class="close-btn" onclick="closePopup()">X</span>
+                            <p>2. Selecciona la unidad inicial.</p> 
+                        </div>
+                    </div>
+                </div>
+   
+                <div class="contForm">
+                    <p class="textForm manTexPos">Convertir el número: </p>
+
+                    <input class="textForm imputValue" type="text" id="input" value="0,5" onkeydown="return event.key !== 'Enter';" placeholder="Ingrese un numero" oninput="permitirPuntoComa(event)" />
+
+
+                    <p class="textForm manTexPos"> de </p>	
+
+                    <select class="textForm selectors textNotice" id="unidad" onchange="splitNumber()">
+                    <option value="Tm" data-exponent="0">Tm</option>
+                    <option value="Gm" data-exponent="3">Gm</option>
+                    <option value="Mm" data-exponent="6">Mm</option>
+                    <option value="Km" data-exponent="9">Km</option>
+                    <option value="Hm" data-exponent="10">Hm</option>
+                    <option value="Dm" data-exponent="11">Dm</option>
+                    <option value="m" data-exponent="12" selected>m</option>
+                    <option value="dm" data-exponent="13">dm</option>
+                    <option value="cm" data-exponent="14">cm</option>
+                    <option value="mm" data-exponent="15">mm</option>
+                    <option value="µm" data-exponent="18">µm</option>
+                    <option value="nm" data-exponent="21">nm</option>
+                    <option value="pm" data-exponent="24">pm</option>
+                    </select>
+
+                    <p class="textForm manTexPos" > a </p>
+
+                    <select class="textForm selectors textNotice" id="escala" onchange="splitNumber()">
+                    <option value="Tm" data-exponent="0">Tm</option>
+                    <option value="Gm" data-exponent="3">Gm</option>
+                    <option value="Mm" data-exponent="6">Mm</option>
+                    <option value="Km" data-exponent="9"selected>Km</option>
+                    <option value="Hm" data-exponent="10">Hm</option>
+                    <option value="Dm" data-exponent="11">Dm</option>
+                    <option value="m" data-exponent="12" >m</option>
+                    <option value="dm" data-exponent="13">dm</option>
+                    <option value="cm" data-exponent="14">cm</option>
+                    <option value="mm" data-exponent="15">mm</option>
+                    <option value="µm" data-exponent="18">µm</option>
+                    <option value="nm" data-exponent="21">nm</option>
+                    <option value="pm" data-exponent="24">pm</option>
+                    </select>
+                </div>
+            </Form>
+        </div>
+
+        <div class="row">
+            <table class="table2" id="table2" >
+                <td class= "tdBut"><button class="buttonArt" style = "background-color: white;" id="cell1" onclick="presCell('1')" selected>Längen</button></td>
+                <td class= "tdBut"><button class="buttonArt" id="cell2" onclick="presCell('2')">Flächen</button></td>
+                <td class= "tdBut"><button class="buttonArt" id="cell3" onclick="presCell('3')">Volumen</button></td>
+                <td style= "display: none" id = "indice">1</td>
+            </table>
+        </div>
+
+        <div style="height: 0px; " class="row">
+            <div id="popupWrapper4" class="popupWrapper">
+                <div style= "top: -3px; left: 5%; float: left; " id="popup" class="popup-up">
+                    <div class="popup-arrow-up1"></div>
+                    <span class="close-btn" onclick="closePopup()">X</span>
+                    <p>Puedes cambiar la unidad de conversion SI. entre Longitud, Area o Volumen. </p> 
+                </div>
+            </div>
+            <div id="popupWrapper3" class="popupWrapper">
+                <div style= "top: -110px; left: 40%; float: left; " id="popup" class="popup-up">
+                    <div class="popup-arrow-up2"></div>
+                    <span class="close-btn" onclick="closePopup()">X</span>
+                    <p>3. Selecciona la unidad final.</p> 
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="contDescript">
+        <div class="board" id = "descrip">
+            <div style="text-align: center;">
+                <h1>Que es MUL?</h1>
+                <p style="text-align: center;"class="ptexDesc">MUL es una herramienta que te permite converit las unidades basicas de medida</p>
+                <p style="text-align: center; padding-bottom: 20px;" class="ptexDesc">del sistema interanaciona de medidas (SI), con tan solo 3 pasos.</p>
+            </div>
+            <div class="row">
+                <div id="contDinamic">
+                    <div id="anterior">&lt;</div>
+                    <div class="caja">1. Escribir el numero haciendo que la coma coincida con la unidad correspondiente en MUL.</div>
+                    <div class="caja">2. Buscar la unidad final deseada en MUL </div>
+                    <div class="caja">3. Desplazar la coma a la pocicion final y en caso de ser necesario rellenar las celdas basias con 0.</div>
+                    <div id="siguiente">&gt;</div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <p style="padding-top: 20px;" class="ptexDesc">MUL está diseñada para facilitar el aprendizaje en la conversión de unidades mediante métodos mnemotécnicos, optimizando los recursos 
+                    neuronales destinados a la resolución de problemas matemáticos y reduciendo el esfuerzo requerido para la conversión de unidades.</p>
+                <p style="padding-top: 20px;" class="ptexDesc">MUL evita que la persona realice cálculos matemáticos, pero no omite el proceso de conversión, sino que lo integra en cada ejercicio, 
+                    lo que facilita la memorización de los factores de conversión. Al contener estos factores y al ser visualizada durante períodos prolongados, 
+                    la retentiva de la herramienta reducirá la posibilidad de cometer errores en la conversión de unidades del Sistema Internacional (SI).</p>
+                <p class="ptexDesc"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                         Example Bock                                                                                
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class= "example">
+		<div id="example" style=" margin: 0px auto 20px auto; border: 2px solid transparent; " class="board">
+			<div style="position: relative;">
+				<!-- Título centrado -->
+				<div class="divDesTitel">
+					<span class="desTitel">Ejemplo de conversión de unidades lineales</span>
+				</div>
+				<!-- Contenido del párrafo -->
+                <div class="exBlockCon">
+					<p class="pDesText">En el siguiente video se muestra un ejemplo de converción de unidades de longitud.</p>
+                    <div class="row exDetCont">
+                        <img src="icon/indicate-arrow.png" class="indicArrow">
+                        <p class="pDesText">778,576 metros [m] a Megametros [Mm].</p>
+                    </div>
+					<button class="buttDetEx"  id="InfoBut1">
+                        <img src="icon/Information-indicator-black.png" class="imgButtDetEx">
+                    </button>
+                    <button class="buttCloEx"  id="InfoCloBut1">
+                        <img src="icon/Cancel-black-256.png" class="imgButtCloEx">
+                    </button>
+                    <div class="exTexCont" id="InfTex1">
+                        <p class="pDesText">1. Se busca la unidad inicial en MUL, en este caso metros [m] y se escribe el número haciendo que la coma coincida con la posición de la unidad en MUL.</p>
+					<p class="pDesText">2. Se busca la unidad final en MUL, la cual en este caso es Megametros [Mm] y se desplaza la coma a esta posición.</p>
+					<p class="pDesText">3. En caso de que se tengan celdas vacias entre la coma y el numero se llenan con ceros y antes de la coma tambien se coloca un cero.</p>
+				    </div>
+				</div>
+			</div>
+			<div style="border: 2px solid transparent; text-align: center;">
+				<video class="video-container" id="MUL_Laenge" controls>
+					<source src="video/20240223_MUL_Laengen.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div >
+				<!-- Título centrado -->
+				<div style="width: 100%; background-color: #FFFF00;" class="divDesTitel">
+					<span class="desTitel" >Ejemplo de conversión de unidades de area</span>
+				</div>
+				<!-- Contenido del párrafo -->
+                <div class="exBlockCon">
+					<p class="pDesText">En el siguiente video se muestra un ejemplo de converción de unidades de area.</p>
+                    <div class="row exDetCont">
+                        <img src="icon/indicate-arrow.png" class="indicArrow">
+                        <p class="pDesText">0,778576 hektar [ha] a centimeter cuadrados [cm^2].</p>
+                    </div>
+					<button class="buttDetEx"  id="InfoBut2">
+                        <img src="icon/Information-indicator-black.png" class="imgButtDetEx">
+                    </button>
+                    <button class="buttCloEx"  id="InfoCloBut2">
+                        <img src="icon/Cancel-black-256.png" class="imgButtCloEx">
+                    </button>
+                    <div class="exTexCont" id="InfTex2">
+                        <p class="pDesText">1. Se busca la unidad inicial en MUL, en este caso hektar [ha] y se escribe el número haciendo que la coma coincida con la posición de la unidad en MUL.</p>
+					    <p class="pDesText">2. Se busca la unidad final en MUL, la cual en este caso es centimeter cuadrad [cm^2] y se desplaza la coma a esta posición.</p>
+					    <p class="pDesText">3. Los ceros que se encuentran antes del primer numero se borran.</p>
+				    </div>
+				</div>
+			</div>
+			<div style="border: 2px solid transparent; text-align: center;">
+				<video class="video-container" id="MUL_Flechen" controls>
+					<source src="video/20240223_MUL_Flechen.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div >
+				<!-- Título centrado -->
+				<div style="width: 100%; background-color: #70AD47;" class="divDesTitel">
+					<span class="desTitel">Ejemplo de conversión de unidades de volumen</span>
+				</div>
+				<!-- Contenido del párrafo -->
+				<div class="exBlockCon">
+					<p class="pDesText">En el siguiente video se muestra un ejemplo de converción de unidades de volumen.</p>
+                    <div class="row exDetCont">
+                        <img src="icon/indicate-arrow.png" class="indicArrow">
+                        <p class="pDesText">7785,76 centimetros cubicos [cm^3] a kilometros cubicos [Km^3].</p>
+                    </div>
+					<button class="buttDetEx"  id="InfoBut3">
+                        <img src="icon/Information-indicator-black.png" class="imgButtDetEx">
+                    </button>
+                    <button class="buttCloEx"  id="InfoCloBut3">
+                        <img src="icon/Cancel-black-256.png" class="imgButtCloEx">
+                    </button>
+                    <div class="exTexCont" id="InfTex3">
+                        <p class="pDesText">1. Se busca la unidad inicial en MUL, en este caso kubikcentimeter [cm^3] y se escribe el número haciendo que la coma coincida con la posición de la unidad en MUL.</p>
+                        <p class="pDesText">2. Se busca la unidad final en MUL, la cual en este caso es kubikkilometer [Km^3] y se desplaza la coma a esta posición.</p>
+                        <p class="pDesText">3. En caso de que se tengan celdas vacias entre la coma y el numero se llenan con ceros y antes de la coma tambien se coloca un cero.</p>
+				    </div>
+                </div>
+			</div>
+			<div style="border: 2px solid transparent; text-align: center;">
+				<video class="video-container" id="MUL_Volumen" controls>
+					<source src="video/20240223_MUL_Volumen.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+		</div>
+	</div>
+
+    <footer class="footerCont" >
+        <div class="container">
+            <div style="width: 1200px;" class="row">
+                <a href="#" class="contenBotton">
+                    <img src="icon/Confused.png" class="imgFooter">
+                    <h3 class="textButFoot"><strong>Preguntas frecuentes</strong></h3>
+                </a>
+                <a href="#" class="contenBotton">
+                    <img src="icon/Mail-01-256.png" class="imgFooter">
+                    <h3 class="textButFoot"><strong>Contactenos</strong></h3>
+                </a>
+                <a href="#" class="contenBotton">
+                    <img src="icon/User-Group.png" class="imgFooter">
+                    <h3 class="textButFoot"><strong>El equipo</strong></h3>
+                </a>
+                <a href="#" class="contenBotton">
+                    <img src="icon/Agreement-01-256.png" class="imgFooter">
+                    <h3 class="textButFoot"><strong>Politicas de confidencialidad</strong></h3>
+                </a>
+            </div>
+            <p style="text-align: center;"><strong> &copy; Maßeinheitenumwandlung und Lineal</strong> <br> by Ing. Mauricio Mora MSc.</p>
+            
+        </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

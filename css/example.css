@@ -1,0 +1,127 @@
+.example {
+    width: 100%;
+    max-width: 1200px; 
+    min-width: 600px;
+    margin: 20px auto;
+    padding: 10 px;
+    border: 2px solid transparent; 
+    padding: 0px;
+}
+
+.exBlockCon {
+    border: 2px solid transparent; 
+    padding: 0px; 
+    margin-top: 50px; 
+    padding: 0 20px;
+}
+
+.exDetCont {
+    margin: 0px 60px; 
+    width: 80%;
+}
+.exTexCont {
+    margin: 20px auto; 
+    width: 90%; display: none; 
+    border-radius: 10px; 
+    border: 2px solid black;
+}
+
+.examCont {
+    border: 2px solid transparent; 
+    padding: 0px; 
+    margin-top: 50px; 
+    padding: 0 20px;
+}
+
+/* Estilos titulos de la descripcion */
+.divDesTitel{
+    border: 2px solid transparent; 
+    padding: 0px; 
+    position: relative; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+}
+
+.desTitel{
+    font-family: Comic Sans MS; 
+    font-size: 25px; 
+    font-weight: bold;
+}
+
+/* Estilos parrafo de la descrip */
+.pDesText{
+    font-family: Arial, sans-serif; 
+    font-size: 18px; 
+    text-align: left; 
+    margin: 0;
+    padding: 10px;
+}
+
+.indicArrow {
+    margin: 10px;
+    height: 30px;
+    float: left;
+}
+
+/* Estilos para el contenedor del video */
+.video-container {
+    display: inline-block; 
+    width: 800px; 
+    max-width: 100%;
+    padding: 10px;
+}
+
+/*Button to display the information from the Example*/
+.buttDetEx {
+    height: 40px;
+    width: 40px;
+    float: right; 
+    margin: -30px 60px; 
+    border-radius: 10px; 
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+
+.buttDetEx:hover{
+    transform: scale(1.1);
+    font-size: 20px; 
+    text-decoration: underline;
+    background-color:  var(--button-over);
+    border: 4px solid black;
+}
+
+.imgButtDetEx {
+    margin-top: 2px;
+    height: 20px; 
+    border-radius: 8px; 
+}
+
+/*Close button*/
+.buttCloEx {
+    display: none;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    float: right; 
+    margin: 30px 65px; 
+    border-radius: 20px; 
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+
+.buttCloEx:hover{
+    transform: scale(1.1);
+    font-size: 20px; 
+    text-decoration: underline;
+    background-color:  var(--button-over);
+    border: 4px solid black;
+}
+
+.imgButtCloEx {
+    margin-left: -2.5px;
+    margin-top: 2px;
+    height: 20px; 
+    border-radius: 8px; 
+}

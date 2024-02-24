@@ -1,0 +1,35 @@
+.footerCont {
+    position: relative;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-weight: bold;
+    width: 100%; 
+    background-color: black;
+ 
+    padding: 0px;
+}
+
+.contenBotton {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.imgFooter {
+    height: 80px;
+    text-align: center;
+    font-size: 12px;
+    margin: 20px auto;
+    
+}
+
+.textButFoot{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: -10px;
+}

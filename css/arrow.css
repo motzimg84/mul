@@ -1,0 +1,57 @@
+.flechaUp {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid;
+    border-bottom-color: red;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    top: -17px;
+    left: var(--leftFUp);
+    z-index: 101;
+}
+
+.colaF {
+    position: relative; 
+    height: 23px; 
+    border-left: 4px solid red;
+    border-right: 4px solid red; 
+    border-bottom: 4px solid red;
+    border-radius: 10px;
+    width: var(--widthCola);
+    left: var(--leftCola);
+    z-index: 95;
+}
+
+.colaFL {
+    position: relative; 
+    height: 17px; 
+    background-color: white;
+    border-left: 4px solid;
+    border-left-color: var(--cFLcolorBL);
+    border-right: 4px solid;
+    border-right-color: var(--cFLcolorBR);
+    width: var(--widthCola);
+    left: var(--leftCola);
+}
+
+/*Style from dem Awors divs*/
+.flechaLine {
+    position: relative;
+    top: -2px;
+    width: 100%; 
+    height: 15px;   
+    overflow: hidden;
+    top: -2px; 
+    z-index: 99;
+}
+
+.flechaStyle {
+    position: relative;  
+    width: 100%; 
+    height: 24px;  
+    border-left: 1px solid transparent; 
+    top: -27px; 
+    overflow: hidden;
+    
+}

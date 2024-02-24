@@ -1,0 +1,112 @@
+.navbar {
+    border: 2px solid black;
+    background-color: gray;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.conteinterImag{
+    float: left;
+    height: auto;
+    border: 4px solid transparent;
+}
+
+#contMenu{
+    height: 100px; 
+    padding: 0px;
+}
+
+
+.navbar-button {
+    width: 50px;
+    background-color: #f77d32;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    float: right;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.navbar-item {
+    width: 200px;
+    background-color: white;
+    padding: 10px 20px;
+    font-family: Comic Sans MS; 
+    font-size: 16px; 
+    font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navbar-img {
+    position: relative;
+    display: block;
+    object-fit: cover; 
+    float: left;
+    margin: 5px;
+    margin-right: 20px;
+    width: 120px;
+    height: 50px;
+    z-index: 900; /* Asigna un z-index alto para que la imagen esté siempre al frente */ 
+}
+
+.navbar-items {
+    width: 89%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        border: 2px solid Black;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-items {
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+    }
+    
+    .navbar-items.show {
+        display: flex;
+    }
+    .navbar-item {
+        margin: 5px;
+    }
+
+    .navbar-img {
+        margin: 5px;
+        margin-right: 20px;
+        width: 120px;
+        height: 50px; 
+    }
+}

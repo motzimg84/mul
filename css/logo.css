@@ -1,0 +1,14 @@
+.contLogo {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 20px auto;
+}
+
+.imgLog {
+    position: relative;
+    display: block;
+    width: 50%; 
+    margin: auto ;
+    z-index: 900; /* Asigna un z-index alto para que la imagen esté siempre al frente */
+}
