@@ -17,6 +17,26 @@
     margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1000px) {
+    .contenBotton {
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .contenBotton {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+}
+
 .imgFooter {
     height: 80px;
     text-align: center;
